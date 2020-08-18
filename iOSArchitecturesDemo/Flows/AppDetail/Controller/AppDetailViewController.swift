@@ -13,6 +13,7 @@ final class AppDetailViewController: UIViewController {
     var app: ITunesApp
     
     lazy var headerViewController = AppDetailHeaderViewController(app: self.app)
+    lazy var appDetailVersionViewController = AppDetailVersionViewController(app: self.app)
     
     init(app: ITunesApp) {
         self.app = app
@@ -50,19 +51,17 @@ final class AppDetailViewController: UIViewController {
     }
     
     private func addDescriptionViewController() {
-        // TODO: ДЗ, сделать другие сабмодули
-        let descriptionViewController = UIViewController()
         
-        self.addChild(descriptionViewController)
-        self.view.addSubview(descriptionViewController.view)
-        descriptionViewController.didMove(toParent: self)
+        self.addChild(appDetailVersionViewController)
+        self.view.addSubview(appDetailVersionViewController.view)
+        appDetailVersionViewController.didMove(toParent: self)
         
-        descriptionViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        appDetailVersionViewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            descriptionViewController.view.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor),
-            descriptionViewController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            descriptionViewController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            descriptionViewController.view.heightAnchor.constraint(equalToConstant: 250.0)
+            appDetailVersionViewController.view.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor),
+            appDetailVersionViewController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            appDetailVersionViewController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            appDetailVersionViewController.view.heightAnchor.constraint(equalToConstant: 250.0)
             ])
     }
 }

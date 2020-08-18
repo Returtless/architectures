@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EC558A8E-9F3F-4139-8A87-61AF7CF562D4"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "839A79F5-8ED3-47EA-BE1C-CE6804F16E69"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArchitecturesDemo/Flows/AppDetail/Controller/AppDetailHeaderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "fillData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "839A79F5-8ED3-47EA-BE1C-CE6804F16E69 - c8097c8b0cec1542"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSArchitecturesDemo.AppDetailHeaderViewController.(fillData in _011D7BC67C78112DC45E3BBD36EBAE90)() -&gt; ()"
+                  moduleName = "iOSArchitecturesDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/returtless/Repository/architectures/iOSArchitecturesDemo/Flows/AppDetail/Controller/AppDetailHeaderViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "505">
+               </Location>
+               <Location
+                  uuid = "839A79F5-8ED3-47EA-BE1C-CE6804F16E69 - e1e419d31a4f54e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Float) -&gt; Swift.Optional&lt;Swift.String&gt; in iOSArchitecturesDemo.AppDetailHeaderViewController.(fillData in _011D7BC67C78112DC45E3BBD36EBAE90)() -&gt; ()"
+                  moduleName = "iOSArchitecturesDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/returtless/Repository/architectures/iOSArchitecturesDemo/Flows/AppDetail/Controller/AppDetailHeaderViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "897A11AA-36EE-40DF-AD1B-2A2C27463C24"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArchitecturesDemo/Model/Services/iTunesSearchService/ITunesSearchService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "getApps(forQuery:then:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C354738-5BA6-4658-98F0-DA0BFF6B9399"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArchitecturesDemo/Model/Entities/ITunesApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "init(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
