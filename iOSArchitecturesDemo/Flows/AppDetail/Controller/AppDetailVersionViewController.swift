@@ -46,8 +46,9 @@ final class AppDetailVersionViewController: UIViewController {
     
     private func fillData() {
         self.appDetailVersionView.titleLabel.text = "Что нового"
-        self.appDetailVersionView.versionLabel.text = app.version
+        self.appDetailVersionView.versionLabel.text = "Версия \(app.version ?? "1.0")"
         self.appDetailVersionView.descriptionLabel.text = app.releaseNotes
     }
     
 }
+

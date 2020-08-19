@@ -16,7 +16,7 @@ class AppDetailVersionView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        label.font = UIFont.boldSystemFont(ofSize: 16.0)
         label.numberOfLines = 1
         return label
     }()
@@ -33,7 +33,7 @@ class AppDetailVersionView: UIView {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: frame.width, height: CGFloat.greatestFiniteMagnitude))
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 12)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0;
         label.sizeToFit()
@@ -66,16 +66,15 @@ class AppDetailVersionView: UIView {
             self.titleLabel.heightAnchor.constraint(equalToConstant: 30),
             
             
-            self.versionLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 12.0),
+            self.versionLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor),
             self.versionLabel.heightAnchor.constraint(equalToConstant: 30),
-            self.versionLabel.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
+            self.versionLabel.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16.0),
             self.versionLabel.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor),
             
             
             self.descriptionLabel.topAnchor.constraint(equalTo: self.versionLabel.bottomAnchor, constant: 6),
-            self.descriptionLabel.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
-            self.descriptionLabel.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor),
-            self.descriptionLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            self.descriptionLabel.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16.0),
+            self.descriptionLabel.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor)
             ])
     }
 
