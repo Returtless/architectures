@@ -8,17 +8,17 @@
 
 import UIKit
 
-final class SearchViewController: UIViewController {
+final class SearchSongViewController: UIViewController {
     
     // MARK: - Private Properties
-    private let presenter: SearchViewOutput
+    private let presenter: SearchSongViewOutput
     
     private var searchView: SearchView {
         return self.view as! SearchView
     }
     
     private let searchService = ITunesSearchService()
-    var searchResults = [ITunesApp]() {
+    var searchResults = [ITunesSong]() {
         didSet {
             self.searchView.tableView.isHidden = false
             self.searchView.tableView.reloadData()
@@ -32,7 +32,7 @@ final class SearchViewController: UIViewController {
     
     // MARK: - Lifecycle
     
-    init(presenter: SearchViewOutput) {
+    init(presenter: SearchSongViewOutput) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -50,7 +50,7 @@ final class SearchViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.searchView.searchBar.delegate = self
-        self.searchView.tableView.register(AppCell.self, forCellReuseIdentifier: Constants.reuseIdentifier)
+        self.searchView.tableView.register(SongCell.self, forCellReuseIdentifier: Constants.reuseIdentifier)
         self.searchView.tableView.delegate = self
         self.searchView.tableView.dataSource = self
     }
@@ -63,7 +63,7 @@ final class SearchViewController: UIViewController {
 }
 
 //MARK: - UITableViewDataSource
-extension SearchViewController: UITableViewDataSource {
+extension SearchSongViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResults.count
@@ -71,28 +71,28 @@ extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: Constants.reuseIdentifier, for: indexPath)
-        guard let cell = dequeuedCell as? AppCell else {
+        guard let cell = dequeuedCell as? SongCell else {
             return dequeuedCell
         }
-        let app = self.searchResults[indexPath.row]
-        let cellModel = AppCellModelFactory.cellModel(from: app)
+        let song = self.searchResults[indexPath.row]
+        let cellModel = SongCellModelFactory.cellModel(from: song)
         cell.configure(with: cellModel)
         return cell
     }
 }
 
 //MARK: - UITableViewDelegate
-extension SearchViewController: UITableViewDelegate {
+extension SearchSongViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let app = searchResults[indexPath.row]
-      self.presenter.viewDidSelectApp(app);
+        let song = searchResults[indexPath.row]
+      self.presenter.viewDidSelectApp(song);
     }
 }
 
 //MARK: - UISearchBarDelegate
-extension SearchViewController: UISearchBarDelegate {
+extension SearchSongViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let query = searchBar.text else {
@@ -107,7 +107,7 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
-extension SearchViewController: SearchViewInput {
+extension SearchSongViewController: SearchSongViewInput {
     
     func showError(error: Error) {
         let alert = UIAlertController(title: "Error", message: "\(error.localizedDescription)", preferredStyle: .alert)
@@ -131,11 +131,12 @@ extension SearchViewController: SearchViewInput {
     }
 }
 
-final class SearchModuleBuilder {
+
+final class SearchSongModuleBuilder {
     
-    static func build() -> (UIViewController & SearchViewInput) {
-        let presenter = SearchPresenter()
-        let viewController = SearchViewController(presenter: presenter)
+    static func build() -> (UIViewController & SearchSongViewInput) {
+        let presenter = SearchSongPresenter()
+        let viewController = SearchSongViewController(presenter: presenter)
         presenter.viewInput = viewController
         return viewController
     }

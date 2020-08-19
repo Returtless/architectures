@@ -12,11 +12,11 @@ import UIKit
 final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var appStartManager: AppStartManager?
+    var appStartManager: SongStartManager?
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.appStartManager = AppStartManager(window: self.window)
+        self.appStartManager = SongStartManager(window: self.window)
         self.appStartManager?.start()
         return true
     }
