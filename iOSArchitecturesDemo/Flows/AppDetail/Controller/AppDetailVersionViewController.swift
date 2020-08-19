@@ -14,8 +14,6 @@ final class AppDetailVersionViewController: UIViewController {
     
     private let app: ITunesApp
     
-    private let imageDownloader = ImageDownloader()
-    
     private var appDetailVersionView: AppDetailVersionView {
         return self.view as! AppDetailVersionView
     }

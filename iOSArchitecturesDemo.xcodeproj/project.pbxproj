@@ -16,6 +16,8 @@
 		527FF03C24EDA7B000A99558 /* SearchSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285A6E224ED9E9500DAC08F /* SearchSongViewController.swift */; };
 		527FF03D24EDA7B200A99558 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285A6DF24ED9E5E00DAC08F /* SongCell.swift */; };
 		527FF03E24EDA7B500A99558 /* SearchSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285A6E024ED9E5E00DAC08F /* SearchSongView.swift */; };
+		527FF04024EDB95700A99558 /* AppDetailScreenshotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FF03F24EDB95700A99558 /* AppDetailScreenshotsView.swift */; };
+		527FF04224EDBA8B00A99558 /* AppDetailScreenshotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FF04124EDBA8B00A99558 /* AppDetailScreenshotsViewController.swift */; };
 		5285A6D424EC6AFF00DAC08F /* AppDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285A6D324EC6AFF00DAC08F /* AppDetailHeaderView.swift */; };
 		5285A6D624EC6B2B00DAC08F /* AppDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285A6D524EC6B2B00DAC08F /* AppDetailHeaderViewController.swift */; };
 		5285A6D824EC72A200DAC08F /* AppDetailVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285A6D724EC72A200DAC08F /* AppDetailVersionView.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		5267E77B24EDA36200541EB9 /* SearchSongPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongPresenter.swift; sourceTree = "<group>"; };
+		527FF03F24EDB95700A99558 /* AppDetailScreenshotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailScreenshotsView.swift; sourceTree = "<group>"; };
+		527FF04124EDBA8B00A99558 /* AppDetailScreenshotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailScreenshotsViewController.swift; sourceTree = "<group>"; };
 		5285A6D324EC6AFF00DAC08F /* AppDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderView.swift; sourceTree = "<group>"; };
 		5285A6D524EC6B2B00DAC08F /* AppDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderViewController.swift; sourceTree = "<group>"; };
 		5285A6D724EC72A200DAC08F /* AppDetailVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailVersionView.swift; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 				F8114FC422A3E77500102830 /* AppDetailView.swift */,
 				5285A6D324EC6AFF00DAC08F /* AppDetailHeaderView.swift */,
 				5285A6D724EC72A200DAC08F /* AppDetailVersionView.swift */,
+				527FF03F24EDB95700A99558 /* AppDetailScreenshotsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				E0E1D3D0203C48D70011E01A /* AppDetailViewController.swift */,
 				5285A6D924EC73EF00DAC08F /* AppDetailVersionViewController.swift */,
 				5285A6D524EC6B2B00DAC08F /* AppDetailHeaderViewController.swift */,
+				527FF04124EDBA8B00A99558 /* AppDetailScreenshotsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -503,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5285A6DC24ED8B4900DAC08F /* SearchPresenter.swift in Sources */,
+				527FF04024EDB95700A99558 /* AppDetailScreenshotsView.swift in Sources */,
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
 				527FF03924EDA7A900A99558 /* SongDetailHeaderView.swift in Sources */,
 				5285A6DA24EC73EF00DAC08F /* AppDetailVersionViewController.swift in Sources */,
@@ -512,6 +519,7 @@
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
 				5285A6D624EC6B2B00DAC08F /* AppDetailHeaderViewController.swift in Sources */,
+				527FF04224EDBA8B00A99558 /* AppDetailScreenshotsViewController.swift in Sources */,
 				E0E1D3D4203C4AA50011E01A /* UIColor+Extensions.swift in Sources */,
 				5285A6D424EC6AFF00DAC08F /* AppDetailHeaderView.swift in Sources */,
 				E0E1D3D1203C48D70011E01A /* AppDetailViewController.swift in Sources */,
