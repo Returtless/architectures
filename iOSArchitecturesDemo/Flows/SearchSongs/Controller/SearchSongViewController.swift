@@ -135,10 +135,14 @@ extension SearchSongViewController: SearchSongViewInput {
 final class SearchSongModuleBuilder {
     
     static func build() -> (UIViewController & SearchSongViewInput) {
-        let presenter = SearchSongPresenter()
+        let router = SearchSongRouter()
+        let interactor = SearchSongInteractor()
+        let presenter = SearchSongPresenter(interactor: interactor, router: router)
         let viewController = SearchSongViewController(presenter: presenter)
+        
         presenter.viewInput = viewController
+        router.viewController = viewController
+        
         return viewController
     }
-    
 }

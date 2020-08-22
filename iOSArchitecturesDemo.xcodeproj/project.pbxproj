@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5275221F24F1B9C900F980D8 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275221E24F1B9C900F980D8 /* SearchRouter.swift */; };
 		5275222224F1BA2800F980D8 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275222124F1BA2800F980D8 /* SearchInteractor.swift */; };
+		5275222624F1BC9D00F980D8 /* SearchSongRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275222524F1BC9D00F980D8 /* SearchSongRouter.swift */; };
+		5275222B24F1C00000F980D8 /* SearchSongInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275222824F1BD5900F980D8 /* SearchSongInteractor.swift */; };
 		527FF03624EDA79C00A99558 /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4FA1424EDA51700A011AA /* SongDetailViewController.swift */; };
 		527FF03724EDA79E00A99558 /* SongDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4FA1524EDA56700A011AA /* SongDetailHeaderViewController.swift */; };
 		527FF03824EDA7A100A99558 /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4FA1124EDA4B600A011AA /* SongDetailView.swift */; };
@@ -51,6 +53,8 @@
 		5267E77B24EDA36200541EB9 /* SearchSongPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongPresenter.swift; sourceTree = "<group>"; };
 		5275221E24F1B9C900F980D8 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		5275222124F1BA2800F980D8 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		5275222524F1BC9D00F980D8 /* SearchSongRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongRouter.swift; sourceTree = "<group>"; };
+		5275222824F1BD5900F980D8 /* SearchSongInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongInteractor.swift; sourceTree = "<group>"; };
 		527FF03F24EDB95700A99558 /* AppDetailScreenshotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailScreenshotsView.swift; sourceTree = "<group>"; };
 		527FF04124EDBA8B00A99558 /* AppDetailScreenshotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailScreenshotsViewController.swift; sourceTree = "<group>"; };
 		5285A6D324EC6AFF00DAC08F /* AppDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderView.swift; sourceTree = "<group>"; };
@@ -137,12 +141,30 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		5275222724F1BD4200F980D8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5275222524F1BC9D00F980D8 /* SearchSongRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5275222A24F1BF5F00F980D8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5275222824F1BD5900F980D8 /* SearchSongInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		5285A6DD24ED9E2E00DAC08F /* SearchSongs */ = {
 			isa = PBXGroup;
 			children = (
 				5267E77B24EDA36200541EB9 /* SearchSongPresenter.swift */,
 				5285A6E124ED9E8E00DAC08F /* Controller */,
 				5285A6DE24ED9E5E00DAC08F /* View */,
+				5275222724F1BD4200F980D8 /* Router */,
+				5275222A24F1BF5F00F980D8 /* Interactor */,
 			);
 			path = SearchSongs;
 			sourceTree = "<group>";
@@ -545,6 +567,8 @@
 				5285A6DA24EC73EF00DAC08F /* AppDetailVersionViewController.swift in Sources */,
 				52A4FA1724EDA5EE00A011AA /* SongStartManager.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
+				5275222B24F1C00000F980D8 /* SearchSongInteractor.swift in Sources */,
+				5275222624F1BC9D00F980D8 /* SearchSongRouter.swift in Sources */,
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
