@@ -49,6 +49,7 @@ final class SongDetailHeaderViewController: UIViewController {
         self.songDetailHeaderView.titleLabel.text = song.trackName
         self.songDetailHeaderView.subtitleLabel.text = song.artistName
         self.songDetailHeaderView.albumLabel.text = song.collectionName
+        self.songDetailHeaderView.buttonDelegate = self
     }
     
     private func downloadImage() {
@@ -56,5 +57,12 @@ final class SongDetailHeaderViewController: UIViewController {
         self.imageDownloader.getImage(fromUrl: url) { [weak self] (image, _) in
             self?.songDetailHeaderView.imageView.image = image
         }
+    }
+}
+
+extension SongDetailHeaderViewController: ButtonClicked {
+    func onButtonTapped() {
+        let playSongViewController = PlaySongViewController()
+        self.navigationController?.pushViewController(playSongViewController, animated: true)
     }
 }

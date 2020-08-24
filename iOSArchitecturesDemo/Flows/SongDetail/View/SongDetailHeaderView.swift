@@ -46,6 +46,17 @@ final class SongDetailHeaderView: UIView {
         return label
     }()
     
+    private(set) lazy var openButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Открыть", for: .normal)
+        button.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
+        button.layer.cornerRadius = 16.0
+        return button
+    }()
+    
+    var buttonDelegate: ButtonClicked?
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -62,10 +73,11 @@ final class SongDetailHeaderView: UIView {
     
     private func setupLayout() {
         self.addSubview(self.imageView)
+        self.addSubview(self.openButton)
         self.addSubview(self.titleLabel)
         self.addSubview(self.subtitleLabel)
         self.addSubview(self.albumLabel)
-        
+
         NSLayoutConstraint.activate([
             self.imageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 12.0),
             self.imageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16.0),
@@ -80,11 +92,23 @@ final class SongDetailHeaderView: UIView {
             self.subtitleLabel.leftAnchor.constraint(equalTo: self.titleLabel.leftAnchor),
             self.subtitleLabel.rightAnchor.constraint(equalTo: self.titleLabel.rightAnchor),
             
-            self.albumLabel.leftAnchor.constraint(equalTo: self.imageView.rightAnchor, constant: 16.0),
-            self.albumLabel.bottomAnchor.constraint(equalTo: self.imageView.bottomAnchor),
+            self.openButton.leftAnchor.constraint(equalTo: self.imageView.rightAnchor, constant: 16.0),
+            self.openButton.bottomAnchor.constraint(equalTo: self.imageView.bottomAnchor),
+            self.openButton.widthAnchor.constraint(equalToConstant: 80.0),
+            self.openButton.heightAnchor.constraint(equalToConstant: 32.0),
+            
+             self.albumLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 24.0),
             self.albumLabel.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor),
+            self.albumLabel.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
             self.albumLabel.heightAnchor.constraint(equalToConstant: 32.0)
-            ])
+        ])
+    }
+    
+    @objc func buttonClicked(_ sender: UIButton?) {
+        buttonDelegate?.onButtonTapped()
     }
 }
 
+protocol ButtonClicked {
+    func onButtonTapped()
+}
